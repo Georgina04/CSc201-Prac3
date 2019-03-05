@@ -212,6 +212,24 @@ public class GenericSet<T>
             return check;
         }
 
-  } // class GenericSet
+        public bool check(string word)
+        {
+            bool answer = false;
+            ListNode curr = first;
+
+            while (curr != null)
+            {
+                if (word.Equals(curr.data))
+                {
+                    answer = true;
+
+                }
+                curr = curr.next;
+            }
+            return answer;
+        }
+
+
+    } // class GenericSet
 
 } // namespace cs2
